@@ -30,7 +30,7 @@ function App() {
     }
   };
 
-  // ✅ Correctly placed outside searchMovies
+  
   const suggestRandomMovie = () => {
     if (movies.length > 0) {
       const randomIndex = Math.floor(Math.random() * movies.length);
@@ -81,7 +81,7 @@ function App() {
 
       <button onClick={suggestRandomMovie}>Suggest Movie</button>
 
-      {/* ✅ Suggested Movie Display */}
+      
       {suggestedMovie && (
         <div className="suggested">
           <h2>Suggested Movie</h2>
@@ -89,7 +89,7 @@ function App() {
         </div>
       )}
 
-      {/* ✅ Filters */}
+      
       <div className="filters">
         <select value={genreFilter} onChange={(e) => setGenreFilter(e.target.value)}>
           <option value="All">All Genres</option>
@@ -105,7 +105,7 @@ function App() {
         </select>
       </div>
 
-      {/* ✅ Filtered Movies */}
+      
       {filteredMovies.length > 0 ? (
         <div className="container">
           {filteredMovies.map((movie) => (
